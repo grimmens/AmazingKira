@@ -1,0 +1,28 @@
+
+
+.navbar {
+    position: fixed; /* Set the navbar to fixed position */
+    top: 5px; /* Position the navbar at the top of the page */
+    left:0;
+    width: 100%; /* Add this to span full width */
+    display: flex; /* Add this for flexbox */
+    justify-content: center; /* This centers the items */
+}
+
+.navbar a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: all 300ms;
+  border: 1px solid transparent;
+  border-radius:12px;
+}
+
+.navbar a:hover {
+  border: 1px solid #646cff;
+}
+
+body {
+    padding-top: 60px; /* Adjust based on your navbar height */
+}

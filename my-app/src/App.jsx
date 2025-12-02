@@ -11,7 +11,7 @@ function App() {
     <>
       <nav className="navbar">
         <Link to="/">Home</Link>
-        <Link to="/dogsocial">Blog</Link>
+        <Link to="/dogsocial">Dog Social</Link>
       </nav>
 
       <Routes>

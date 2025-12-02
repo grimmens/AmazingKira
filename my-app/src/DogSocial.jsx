@@ -1,10 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './DogSocial.css'
-import post1Image from './assets/IMG_4095.jpg'
-import imageChristmasTree from './assets/IMG_3973.jpeg'
-import kiraAvatar from './assets/kira_avatar.png'
-import kiraAvatar3 from './assets/kira_avatar3.png'
-
 import JSConfetti from 'js-confetti'
 
 
@@ -27,174 +22,82 @@ function DogSocial() {
       }
     })
     }
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        fetch('/dog-posts.json')
+        .then(response => response.json())
+        .then(data => setData(data))
+        .catch(error => console.error('Error fetching data:', error));
+    }, []);
+    console.log(data);
+    if (!data) {
+        return <div>Loading...</div>;
+    }
 
     return (
-        <div class="dog-social">
-            <h1>Dog Social</h1>
-            <div class="dog-card">
-                <div class="card-header">
-                    <div class="avatar">
-                        {kiraAvatar ? <img src={kiraAvatar} alt="Kirer" /> : '🐕'}
-                    </div>
-                    <div class="user-info">
-                        <div class="username">Kira</div>
-                        <div class="timestamp">Just now · 🦴</div>
-                    </div>
-                </div>
-
-                <div className="card-content">
-                    <p className="post-text">
-                        Today I decorated the Christmas Tree! What an amazing work of art! I am truly a stable genius. When I unpack the packages I expect steak under the tree... wish me luck 🐾
-                    </p>
-                </div>
-                <div className="card-image-full">
-                    <img src={imageChristmasTree} alt="Post image" />
-                </div>
-                <div class="card-actions">
-                    <button class="action-btn" onClick={() => confetti('❤️')}>
-                        <span class="icon">❤️</span>
-                        <span>Like</span>
-                    </button>
-                    <button class="action-btn">
-                        <span class="icon">💬</span>
-                        <span>Bark</span>
-                    </button>
-                    <button class="action-btn">
-                        <span class="icon">🔄</span>
-                        <span>Share</span>
-                    </button>
-                </div>
+        <div className="dog-social">
+            <div className="dog-logo-image">
+                <img src='/images/DOG_SOCIAL_2.png' />
             </div>
-            <div class="dog-card">
-                <div class="card-header">
-                    <div class="avatar">
-                        {kiraAvatar ? <img src={kiraAvatar} alt="Kirer" /> : '🐕'}
-                    </div>
-                    <div class="user-info">
-                        <div class="username">Kira</div>
-                        <div class="timestamp">Just now · 🦴</div>
-                    </div>
-                </div>
 
-                <div className="card-content">
-                    <p className="post-text">
-                        I love Würstel. I am the best dog in the world! 🐾
-                    </p>
-                </div>
-                <div class="card-actions">
-                    <button class="action-btn" onClick={() => confetti('❤️')}>
-                        <span class="icon">❤️</span>
-                        <span>Like</span>
-                    </button>
-                    <button class="action-btn">
-                        <span class="icon">💬</span>
-                        <span>Bark</span>
-                    </button>
-                    <button class="action-btn">
-                        <span class="icon">🔄</span>
-                        <span>Share</span>
-                    </button>
-                </div>
-            </div>
-            <div class="dog-card">
-                <div class="card-header">
-                    <div className="avatar">
-                        {kiraAvatar ? <img src={kiraAvatar} alt="Kirer" /> : '🐕'}
-                    </div>
-                    <div class="user-info">
-                        <div class="username">Kira</div>
-                        <div class="timestamp">Just now · 🦴</div>
-                    </div>
-                </div>
 
-                <div class="card-content">
-                    <p class="post-text">
-                        That moment when the Würstel falls from the table… gravity is amazing. 😏
-                    </p>
-                </div>
+            {data.map(post => (
+                <div key={post.id} className="dog-card">
+                    <div className="card-header">
+                        <div className="avatar">
+                            {post.avatar ? (
+                                <img src={post.avatar} alt={post.username} />
+                            ) : '🐕'}
+                        </div>
+                        <div className="user-info">
+                            <div className="username">{post.username}</div>
+                            <div className="timestamp">
+                                {post.timestamp}
+                                {post.location && ` · ${post.location}`}
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="card-actions">
-                    <button class="action-btn" onClick={() => confetti('❤️')}>
-                        <span class="icon">❤️</span>
-                        <span>Like</span>
-                    </button>
-                    <button class="action-btn">
-                        <span class="icon">💬</span>
-                        <span>Bark</span>
-                    </button>
-                    <button class="action-btn">
-                        <span class="icon">🔄</span>
-                        <span>Share</span>
-                    </button>
-                </div>
-            </div>
-            <div class="dog-card">
-                <div class="card-header">
-                    <div className="avatar">
-                        {kiraAvatar ? <img src={kiraAvatar} alt="Kirer" /> : '🐕'}
+                    <div className="card-content">
+                        <p className="post-text">{post.text}</p>
                     </div>
-                    <div class="user-info">
-                        <div class="username">Kira</div>
-                        <div class="timestamp">Last Week · 🦴 · 📍 Lemböckgasse 61, Vienna</div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p class="post-text">
-                        I love Steak and Würstel😏. Today I searched for it in Lemböckgasse 61, and I could not find any Würstel... I don't like being on a diet.
-                    </p>
-                </div>
-                <div class="card-actions">
-                    <button class="action-btn" onClick={() => confetti('❤️')}>
-                        <span class="icon">❤️</span>
-                        <span>Like</span>
-                    </button>
-                    <button class="action-btn">
-                        <span class="icon">💬</span>
-                        <span>Bark</span>
-                    </button>
-                    <button class="action-btn">
-                        <span class="icon">🔄</span>
-                        <span>Share</span>
-                    </button>
-                </div>
-            </div>
-            <div class="dog-card">
-                <div class="card-header">
-                    <div class="avatar">
-                        {kiraAvatar3 ? <img src={kiraAvatar3} alt="Kirer" /> : '🐕'}
-                    </div>
-                    <div class="user-info">
-                        <div class="username">Kira</div>
-                        <div class="timestamp">July 17th, 2025 · 🦴 · 📍 Lemböckgasse 61, Vienna</div>
-                    </div>
-                </div>
 
-                <div className="card-content">
-                    <p className="post-text">
-                        Today I was very productive at work. Now I am chilling in the sun and having a bite of my favorite teddy bear #Doglife  🐾
-                    </p>
-                </div>
-                {post1Image && (
+                    {post.image && (
                         <div className="card-image-full">
-                            <img src={post1Image} alt="Post image" />
+                            <img src={post.image} alt="Post image" />
                         </div>
                     )}
 
-                <div class="card-actions">
-                    <button class="action-btn" onClick={() => confetti('❤️')}>
-                        <span class="icon">❤️</span>
-                        <span>Like</span>
-                    </button>
-                    <button class="action-btn">
-                        <span class="icon">💬</span>
-                        <span>Bark</span>
-                    </button>
-                    <button class="action-btn">
-                        <span class="icon">🔄</span>
-                        <span>Share</span>
-                    </button>
+                    {(post.likes > 0 || post.reDogs > 0) && (
+                        <div className="card-stats">
+                            <div className="stat-item">
+                                <span className="stat-number">{post.reDogs}</span>
+                                <span className="stat-label">ReDogs</span>
+                            </div>
+                            <div className="stat-item">
+                                <span className="stat-number">{post.likes}</span>
+                                <span className="stat-label">Likes</span>
+                            </div>
+                        </div>
+                    )}
+
+                    <div className="card-actions">
+                        <button className="action-btn" onClick={(e) => confetti('❤️', e)}>
+                            <span className="icon">❤️</span>
+                            <span>Like</span>
+                        </button>
+                        <button className="action-btn">
+                            <span className="icon">💬</span>
+                            <span>Bark</span>
+                        </button>
+                        <button className="action-btn">
+                            <span className="icon">🔄</span>
+                            <span>Share</span>
+                        </button>
+                    </div>
                 </div>
-            </div>
+            ))}
         </div>
   )
 }

@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import kira from './assets/kira.jpeg'
 import boner from './assets/Boner_Button.svg'
 
 import JSConfetti from 'js-confetti'
@@ -49,15 +48,10 @@ function sprinkle() {
   return (
     <>
       <div class="amazing-kira">
-        <img src={kira} className="logo react" alt="Amazing Kirer" />
-        {/* <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a> */}
+        <img src='/images/kira.jpeg' className="logo react" alt="Amazing Kirer" />
+        
       </div>
-      <h1>Amazing Kirer</h1>
+      <h1>Amazing Kira</h1>
       <div className="card">
         This is the Blog of amazing Kira. The Dog is the most amazing animal ever to live. She loves Würstel, and is always looking for a snack.
         Click this button to give Kira a snack.
@@ -67,9 +61,7 @@ function sprinkle() {
           <br/>
           <img className="paw" src={boner} />
         </button>
-        {/* <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p> */}
+        
       </div>
       <p className="read-the-docs">
         <a href="/blog">Click here</a> to explore more about the life of Kira.

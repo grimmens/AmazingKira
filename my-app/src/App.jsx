@@ -1,6 +1,6 @@
 import { Routes, Route, Link } from 'react-router-dom'
 import AmazingKira from './AmazingKira.jsx'
-import  Blog  from './Blog.jsx'
+import  DogSocial  from './DogSocial.jsx'
 import './App.css'
 
 // Example page components
@@ -11,12 +11,12 @@ function App() {
     <>
       <nav className="navbar">
         <Link to="/">Home</Link>
-        <Link to="/blog">Blog</Link>
+        <Link to="/dogsocial">Blog</Link>
       </nav>
 
       <Routes>
         <Route path="/" element={<AmazingKira />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/dogsocial" element={<DogSocial />} />
       </Routes>
     </>
   )

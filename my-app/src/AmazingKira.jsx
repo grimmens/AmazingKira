@@ -48,7 +48,7 @@ function sprinkle() {
 
   return (
     <>
-      <div>
+      <div class="amazing-kira">
         <img src={kira} className="logo react" alt="Amazing Kirer" />
         {/* <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

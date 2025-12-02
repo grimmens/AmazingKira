@@ -11,7 +11,7 @@
     "reDogs": 45
   },
   {
-    "id": 1,
+    "id": 2,
     "username": "Kira",
     "avatar": "/images/kira_avatar.png",
     "timestamp": "Just now · 🦴",
@@ -22,7 +22,7 @@
     "reDogs": 56
   },
   {
-    "id": 1,
+    "id": 3,
     "username": "Kira",
     "avatar": "/images/kira_avatar.png",
     "timestamp": "3 hours ago · 🦴",
@@ -33,7 +33,7 @@
     "reDogs": 41
   },
   {
-    "id": 2,
+    "id": 4,
     "username": "Kira",
     "avatar": "/images/kira_avatar.png",
     "timestamp": "Just now · 🦴",
@@ -44,7 +44,7 @@
     "reDogs": 42
   },
   {
-    "id": 3,
+    "id": 5,
     "username": "Kira",
     "avatar": "/images/kira_avatar.png",
     "timestamp": "Last week · 🦴",
@@ -55,7 +55,7 @@
     "reDogs": 4
   },
   {
-    "id": 4,
+    "id": 6,
     "username": "Kira",
     "avatar": "/images/kira_avatar.png",
     "timestamp": "Just now · 🦴",
@@ -66,7 +66,7 @@
     "reDogs": 13
   },
   {
-    "id": 5,
+    "id": 7,
     "username": "Kira",
     "avatar": "/images/kira_avatar.png",
     "timestamp": "September 1st, 2025 · 🦴",
@@ -77,7 +77,7 @@
     "reDogs": 24
   },
   {
-    "id": 6,
+    "id": 8,
     "username": "Kira",
     "avatar": "/images/kira_avatar3.png",
     "timestamp": "July 17th, 2025 · 🦴",

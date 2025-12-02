@@ -31,9 +31,6 @@ function DogSocial() {
         .catch(error => console.error('Error fetching data:', error));
     }, []);
     console.log(data);
-    if (!data) {
-        return <div>Loading...</div>;
-    }
 
     return (
         <div className="dog-social">
@@ -41,8 +38,7 @@ function DogSocial() {
                 <img src='/images/DOG_SOCIAL_2.png' />
             </div>
 
-
-            {data.map(post => (
+            {data ? data.map(post => (
                 <div key={post.id} className="dog-card">
                     <div className="card-header">
                         <div className="avatar">
@@ -97,7 +93,7 @@ function DogSocial() {
                         </button>
                     </div>
                 </div>
-            ))}
+            )) : <div>Loading...</div>}
         </div>
   )
 }

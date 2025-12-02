@@ -1,12 +1,13 @@
 .amazing-kira {
+  background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+  min-height: 100vh;
   width: 100vw;
-  /* margin:=;
-  padding:0; */
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 50px 0 0 0;
 }
 
 /* Logo */
@@ -57,7 +58,7 @@ h1 {
   background: linear-gradient(135deg, #5b56f7 0%, #00dbc1 100%);
   border: none;
   border-radius: 16px;
-  padding: 1.5rem 2rem;
+  padding: 0.5rem 1rem;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -79,7 +80,7 @@ h1 {
 
 .count-number {
   color: white;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
@@ -97,7 +98,8 @@ h1 {
 /* Blog Link */
 .blog-link-text {
   font-size: 1rem;
-  margin-top: 2rem;
+  margin: 2rem 0 2rem 0;
+  padding: 5px;
 }
 
 .blog-link-text a {
@@ -112,22 +114,3 @@ h1 {
   border-bottom-color: #667eea;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .amazing-kira {
-    padding: 2rem 1rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  .logo {
-    height: 10em;
-    width: 10em;
-  }
-
-  .card {
-    padding: 1.5rem;
-  }
-}

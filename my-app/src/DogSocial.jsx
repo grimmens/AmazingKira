@@ -90,7 +90,7 @@ function DogSocial() {
                     </div>
 
                     <div className="card-content">
-                        <p className="post-text"><div dangerouslySetInnerHTML={{ __html: post.text }} /></p>
+                        <div className="post-text"><div dangerouslySetInnerHTML={{ __html: post.text }} /></div>
                         {/* Add tags section */}
                         {post.tags && post.tags.length > 0 && (
                             <div className="post-tags">

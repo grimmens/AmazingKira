@@ -1,17 +1,42 @@
 [
   {
-    "id": 1,
+    "id": 10,
+    "username": "Eddie",
+    "avatar": "/images/eddie_profile.png",
+    "timestamp": "Just now · 🦴",
+    "location": null,
+    "text": "I just got a new costume and I think it resembles Santa Clause 🎅. But with the antlers I look like a reindeer, maybe I will help the real santa clause with his delivery. Maybe I can bring over some 🎁. What a wonderful würstel-dream you had <span class=\"tag\">@Kira</div>.",
+    "image": "/images/Eddie_Christmas_Tree.jpeg",
+    "likes": 120,
+    "reDogs": 34,
+    "tags": ["#santaclause", "#christmastree"]
+  },
+  {
+    "id": 9,
+    "username": "Eddie",
+    "avatar": "/images/eddie_profile.png",
+    "timestamp": "Just now · 🦴",
+    "location": null,
+    "text": "I just got a new costume and I think it resembles Santa Clause 🎅. But with the antlers I look like a reindeer, maybe I will help the real santa clause with his delivery. Maybe I can bring over some 🎁. What a wonderful würstel-dream you had <span class=\"tag\">@Kira</div>.",
+    "image": "/images/Eddie_Christmas_Tree.jpeg",
+    "likes": 120,
+    "reDogs": 34,
+    "tags": ["#santaclause", "#christmastree"]
+  },
+  {
+    "id": 8,
     "username": "Kira",
     "avatar": "/images/kira_avatar.png",
     "timestamp": "Just now · 🦴",
     "location": null,
-    "text": "To the great and most powerful Santa Clause 🎅 I was a good puppy this year, and I will continue to be the best behaving puppy in the world. In case you need an idea for a christmas present 🎁...",
+    "text": "To the great and very powerful Santa Clause 🎅 I was a good puppy this year, and I will continue to be the best behaving puppy in the world. In case you need an idea for a christmas present 🎁...",
     "image": "/images/Kira_Salami.png",
     "likes": 173,
-    "reDogs": 45
+    "reDogs": 45,
+    "tags": ["#christmastree", "#salami", "#bestdog"]
   },
   {
-    "id": 2,
+    "id": 7,
     "username": "Kira",
     "avatar": "/images/kira_avatar.png",
     "timestamp": "Just now · 🦴",
@@ -19,10 +44,11 @@
     "text": "Today I had the most fateful dream. I was dreaming of a christmas with an amazingly well decorated salami-christmas-tree. It was the most beautiful tree in the world! Nobody has seen anything like it before, it felt like heaven. That is the real salami dream.🐾",
     "image": "/images/kira denkt an salami weihnachtsbaum.jpg",
     "likes": 321,
-    "reDogs": 56
+    "reDogs": 56,
+    "tags": ["#würsteltree", "#bestdog"]
   },
   {
-    "id": 3,
+    "id": 6,
     "username": "Kira",
     "avatar": "/images/kira_avatar.png",
     "timestamp": "3 hours ago · 🦴",
@@ -33,7 +59,7 @@
     "reDogs": 41
   },
   {
-    "id": 4,
+    "id": 5,
     "username": "Kira",
     "avatar": "/images/kira_avatar.png",
     "timestamp": "Just now · 🦴",
@@ -44,7 +70,7 @@
     "reDogs": 42
   },
   {
-    "id": 5,
+    "id": 4,
     "username": "Kira",
     "avatar": "/images/kira_avatar.png",
     "timestamp": "Last week · 🦴",
@@ -55,7 +81,7 @@
     "reDogs": 4
   },
   {
-    "id": 6,
+    "id": 3,
     "username": "Kira",
     "avatar": "/images/kira_avatar.png",
     "timestamp": "Just now · 🦴",
@@ -66,7 +92,7 @@
     "reDogs": 13
   },
   {
-    "id": 7,
+    "id": 2,
     "username": "Kira",
     "avatar": "/images/kira_avatar.png",
     "timestamp": "September 1st, 2025 · 🦴",
@@ -77,14 +103,15 @@
     "reDogs": 24
   },
   {
-    "id": 8,
+    "id": 1,
     "username": "Kira",
     "avatar": "/images/kira_avatar3.png",
     "timestamp": "July 17th, 2025 · 🦴",
     "location": "📍 Lemböckgasse 61, Vienna",
-    "text": "Today I was very productive at work. Now I am chilling in the sun and having a bite of my favorite teddy bear #Doglife  🐾",
+    "text": "Today I was very productive at work. Now I am chilling in the sun and having a bite of my favorite teddy bear 🐾",
     "image": "/images/IMG_4095.jpg",
     "likes": 63,
-    "reDogs": 27
+    "reDogs": 27,
+    "tags": ["#doglife"]
   }
 ]

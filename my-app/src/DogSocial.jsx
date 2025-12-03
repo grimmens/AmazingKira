@@ -23,14 +23,48 @@ function DogSocial() {
     })
     }
     const [data, setData] = useState(null);
+    // Store likes and reDogs in a state object indexed by post ID
+    const [postStats, setPostStats] = useState({});
 
     useEffect(() => {
         fetch('/dog-posts.json')
-        .then(response => response.json())
-        .then(data => setData(data))
-        .catch(error => console.error('Error fetching data:', error));
+            .then(response => response.json())
+            .then(data => {
+                setData(data)
+                // Initialize postStats with likes and reDogs from data
+                const initialStats = {};
+                data.forEach(post => {
+                    initialStats[post.id] = {
+                        likes: post.likes,
+                        reDogs: post.reDogs
+                    };
+                });
+                setPostStats(initialStats);
+            })
+            .catch(error => console.error('Error fetching data:', error));
     }, []);
-    console.log(data);
+
+    const handleLike = (postId, event) => {
+        confetti('❤️', event);
+        setPostStats(prev => ({
+            ...prev,
+            [postId]: {
+                ...prev[postId],
+                likes: prev[postId].likes + 1
+            }
+        }));
+    };
+
+    const handleReDog = (postId, event) => {
+        // confetti('🔄', event);
+        setPostStats(prev => ({
+            ...prev,
+            [postId]: {
+                ...prev[postId],
+                reDogs: prev[postId].reDogs + 1
+            }
+        }));
+    };
 
     return (
         <div className="dog-social">
@@ -56,8 +90,17 @@ function DogSocial() {
                     </div>
 
                     <div className="card-content">
-                        <p className="post-text">{post.text}</p>
+                        <p className="post-text"><div dangerouslySetInnerHTML={{ __html: post.text }} /></p>
+                        {/* Add tags section */}
+                        {post.tags && post.tags.length > 0 && (
+                            <div className="post-tags">
+                                {post.tags.map((tag, index) => (
+                                    <span key={index} className="tag">{tag}</span>
+                                ))}
+                            </div>
+                        )}
                     </div>
+                    
 
                     {post.image && (
                         <div className="card-image-full">
@@ -65,21 +108,21 @@ function DogSocial() {
                         </div>
                     )}
 
-                    {(post.likes > 0 || post.reDogs > 0) && (
+                    {postStats[post.id] && (postStats[post.id].likes > 0 || postStats[post.id].reDogs > 0) && (
                         <div className="card-stats">
                             <div className="stat-item">
-                                <span className="stat-number">{post.reDogs}</span>
+                                <span className="stat-number">{postStats[post.id].reDogs}</span>
                                 <span className="stat-label">ReDogs</span>
                             </div>
                             <div className="stat-item">
-                                <span className="stat-number">{post.likes}</span>
+                                <span className="stat-number">{postStats[post.id].likes}</span>
                                 <span className="stat-label">Likes</span>
                             </div>
                         </div>
                     )}
 
                     <div className="card-actions">
-                        <button className="action-btn" onClick={(e) => confetti('❤️', e)}>
+                        <button className="action-btn" onClick={(e) => handleLike(post.id, e)}>
                             <span className="icon">❤️</span>
                             <span>Like</span>
                         </button>
@@ -87,7 +130,7 @@ function DogSocial() {
                             <span className="icon">💬</span>
                             <span>Bark</span>
                         </button>
-                        <button className="action-btn">
+                        <button className="action-btn" onClick={(e) => handleReDog(post.id, e)}>
                             <span className="icon">🔄</span>
                             <span>Share</span>
                         </button>

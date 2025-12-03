@@ -128,9 +128,29 @@
      font-size: 15px;
      line-height: 1.5;
      color: #1a1a1a;
-     margin-bottom: 16px;
+     margin-bottom: 0px;
      margin-top:0;
  }
+
+ .post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.tag {
+    color: #667eea;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.tag:hover {
+    color: #4c5fd5;
+    text-decoration: underline;
+}
 
  .card-actions {
      display: flex;

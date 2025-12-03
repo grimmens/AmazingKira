@@ -13,18 +13,6 @@
   },
   {
     "id": 9,
-    "username": "Eddie",
-    "avatar": "/images/eddie_profile.png",
-    "timestamp": "Just now · 🦴",
-    "location": null,
-    "text": "I just got a new costume and I think it resembles Santa Clause 🎅. But with the antlers I look like a reindeer, maybe I will help the real santa clause with his delivery. Maybe I can bring over some 🎁. What a wonderful würstel-dream you had <span class=\"tag\">@Kira</div>.",
-    "image": "/images/Eddie_Christmas_Tree.jpeg",
-    "likes": 120,
-    "reDogs": 34,
-    "tags": ["#santaclause", "#christmastree"]
-  },
-  {
-    "id": 8,
     "username": "Kira",
     "avatar": "/images/kira_avatar.png",
     "timestamp": "Just now · 🦴",
@@ -36,7 +24,7 @@
     "tags": ["#christmastree", "#salami", "#bestdog"]
   },
   {
-    "id": 7,
+    "id": 8,
     "username": "Kira",
     "avatar": "/images/kira_avatar.png",
     "timestamp": "Just now · 🦴",
@@ -46,6 +34,18 @@
     "likes": 321,
     "reDogs": 56,
     "tags": ["#würsteltree", "#bestdog"]
+  },
+  {
+    "id": 7,
+    "username": "Eddie",
+    "avatar": "/images/eddie_profile.png",
+    "timestamp": "Just now · 🦴",
+    "location": null,
+    "text": "I just went for a walk. And anywhere I went, my friends and other not so friendly dogs admired my beautiful costume. <span class=\"tag\">@Kira</span> Do you also find this costume amazing?",
+    "image": "/images/IMG_3981.jpeg",
+    "likes": 120,
+    "reDogs": 34,
+    "tags": ["#santaclause", "#christmastree"]
   },
   {
     "id": 6,
@@ -65,9 +65,10 @@
     "timestamp": "Just now · 🦴",
     "location": null,
     "text": "I love Würstel. I am the best dog in the world! 🐾",
-    "image": null,
+    "image": "images/kira_würstelwarrior2.png",
     "likes": 128,
-    "reDogs": 42
+    "reDogs": 42,
+    "tags": ["#superman", "#salami"]
   },
   {
     "id": 4,

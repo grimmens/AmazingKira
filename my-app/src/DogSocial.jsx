@@ -111,12 +111,12 @@ function DogSocial() {
                     {postStats[post.id] && (postStats[post.id].likes > 0 || postStats[post.id].reDogs > 0) && (
                         <div className="card-stats">
                             <div className="stat-item">
-                                <span className="stat-number">{postStats[post.id].reDogs}</span>
-                                <span className="stat-label">ReDogs</span>
-                            </div>
-                            <div className="stat-item">
                                 <span className="stat-number">{postStats[post.id].likes}</span>
                                 <span className="stat-label">Likes</span>
+                            </div>
+                            <div className="stat-item">
+                                <span className="stat-number">{postStats[post.id].reDogs}</span>
+                                <span className="stat-label">ReDogs</span>
                             </div>
                         </div>
                     )}
@@ -132,7 +132,7 @@ function DogSocial() {
                         </button>
                         <button className="action-btn" onClick={(e) => handleReDog(post.id, e)}>
                             <span className="icon">🔄</span>
-                            <span>Share</span>
+                            <span>ReDog</span>
                         </button>
                     </div>
                 </div>

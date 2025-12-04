@@ -1,18 +1,18 @@
 [
   {
-    "id": 10,
+    "id": 11,
     "username": "Kira",
     "avatar": "/images/kira_avatar.png",
     "timestamp": "Just now · 🦴",
     "location": null,
-    "text": "To the great and very powerful Santa Clause 🎅 I was a good puppy this year, and I will continue to be the best behaving puppy in the world. In case you need an idea for a christmas present 🎁... Please tell Santa to stop by <span class=\"tag\">@Eddie</span>",
+    "text": "To the great and very powerful Santa Clause 🎅 I was a good puppy this year, and I will continue to be the best behaving puppy in the world. In case you need an idea for a christmas present 🎁...",
     "image": "/images/Kira_Salami.png",
     "likes": 173,
     "reDogs": 45,
     "tags": ["#gooddog", "#christmastree", "#salami", "#bestdog"]
   },
   {
-    "id": 9,
+    "id": 10,
     "username": "Eddie",
     "avatar": "/images/eddie_profile.png",
     "timestamp": "Yesterday · 🦴",
@@ -24,7 +24,7 @@
     "tags": ["#santaclause", "#christmastree"]
   },
   {
-    "id": 8,
+    "id": 9,
     "username": "Kira",
     "avatar": "/images/kira_avatar.png",
     "timestamp": "2 days ago · 🦴",
@@ -36,7 +36,7 @@
     "tags": ["#würsteltree", "#bestdog"]
   },
   {
-    "id": 7,
+    "id": 8,
     "username": "Eddie",
     "avatar": "/images/eddie_profile.png",
     "timestamp": "4 days ago · 🦴",
@@ -48,7 +48,7 @@
     "tags": ["#costume", "#amazing"]
   },
   {
-    "id": 6,
+    "id": 7,
     "username": "Kira",
     "avatar": "/images/kira_avatar.png",
     "timestamp": "4 days ago · 🦴",
@@ -60,7 +60,7 @@
     "tags": ["#christmastree"]
   },
   {
-    "id": 5,
+    "id": 6,
     "username": "Kira",
     "avatar": "/images/kira_avatar.png",
     "timestamp": "last week · 🦴",
@@ -69,10 +69,10 @@
     "image": "images/kira_würstelwarrior2.png",
     "likes": 128,
     "reDogs": 42,
-    "tags": ["#superman", "#salami"]
+    "tags": ["#superwürstel", "#salami"]
   },
   {
-    "id": 4,
+    "id": 5,
     "username": "Kira",
     "avatar": "/images/kira_avatar.png",
     "timestamp": "last week · 🦴",
@@ -83,7 +83,7 @@
     "reDogs": 4
   },
   {
-    "id": 3,
+    "id": 4,
     "username": "Kira",
     "avatar": "/images/kira_avatar.png",
     "timestamp": "Oktober 12th, 2025 · 🦴",
@@ -94,7 +94,7 @@
     "reDogs": 13
   },
   {
-    "id": 2,
+    "id": 3,
     "username": "Kira",
     "avatar": "/images/kira_avatar.png",
     "timestamp": "September 1st, 2025 · 🦴",
@@ -105,7 +105,7 @@
     "reDogs": 24
   },
   {
-    "id": 1,
+    "id": 2,
     "username": "Kira",
     "avatar": "/images/kira_avatar3.png",
     "timestamp": "July 17th, 2025 · 🦴",
@@ -115,5 +115,17 @@
     "likes": 63,
     "reDogs": 27,
     "tags": ["#doglife"]
+  },
+    {
+    "id": 1,
+    "username": "Kira",
+    "avatar": "/images/kira_avatar.png",
+    "timestamp": "January 3rd, 2025 · 🦴",
+    "location": null,
+    "text": "Today was my birthday and I got the most amazing salami necklace in the entire world. I was hoping the thing is edible, however the salami was made out of plastic... Are they trying to taunt me? 🙄 🐾",
+    "image": "images/Kira_Wuerstelnecklace.png",
+    "likes": 128,
+    "reDogs": 42,
+    "tags": ["#birthday", "#pearls of salami"]
   }
 ]

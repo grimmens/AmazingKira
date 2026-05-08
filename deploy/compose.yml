@@ -1,0 +1,15 @@
+# Deploy stack for AmazingKira — pulled and run on the self-hosted ARM64
+# CI/CD host. Apache fronts this on 443; the container only listens on
+# loopback:8081.
+#
+# Env values come from /home/cicd/apps/AmazingKira/.env (NOT this file).
+
+name: amazingkira
+
+services:
+  app:
+    image: ghcr.io/grimmens/amazingkira:${IMAGE_TAG}
+    pull_policy: always
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8081:80"
